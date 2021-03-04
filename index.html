@@ -63,8 +63,31 @@
   }
   
   .message {
+    display: block;
+    position: relative;
+    bottom: 0;
+    width: auto;
+    margin: 10px 10px 0;
     font-family: monospace;
-    color: white;
+  }
+  
+  .message p {
+    display: inline-block;
+    max-width: 70%;
+    color: cornflowerblue;
+    background: aliceblue;
+    padding: 5px 10px;
+    margin: 0;
+    border-radius: 10px;
+  }
+  
+  .message--right {
+    text-align: right;
+  }
+  
+  .message--right p {
+    color: aliceblue;
+    background: dodgerblue;
   }
 </style>
 
@@ -76,6 +99,40 @@
       <div class="message">
         <p>
           this is a text
+        </p>
+      </div>
+      
+      <div class="message message--right">
+        <p>
+          this is a text
+        </p>
+      </div>
+      
+      <div class="message">
+        <p>
+          this is another text lorem ipsum
+        </p>
+      </div>
+      
+      <div class="message">
+        <p>
+          hi i love uuuu
+        </p>
+      </div>
+      
+      <div class="message message--right">
+        <p>
+          hi i love
+        </p>
+      </div>
+      <div class="message message--right">
+        <p>
+          u
+        </p>
+      </div>
+      <div class="message message--right">
+        <p>
+          too
         </p>
       </div>
     
