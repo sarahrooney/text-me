@@ -40,6 +40,9 @@
   }
   
   .phone-screen {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -65,10 +68,16 @@
   .message {
     display: block;
     position: relative;
-    bottom: 0;
+    bottom: 0px;
     width: auto;
     margin: 10px 10px 0;
     font-family: monospace;
+    opacity: 1;
+    transform: translateY(-10%);
+  }
+  
+  .message:last-of-type {
+    margin-bottom: 10px;
   }
   
   .message p {
@@ -89,6 +98,40 @@
     color: aliceblue;
     background: dodgerblue;
   }
+  
+  .overlay {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+    height: 450px;
+    mix-blend-mode: darken;
+    overflow: hidden;
+  }
+  
+  .overlay::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 260px;
+    height: 1125px;
+    background: linear-gradient(180deg, Pink 0%, OldLace 33%, Pink 63%, OldLace 100%);
+    animation: gradientAnimate 10s linear infinite;
+  }
+  
+  @keyframes gradientAnimate {
+    0% {
+      transform: translate(-50%, 0%)
+    }
+    100% {
+      transform: translate(-50%, -60%)
+    }
+  }
 </style>
 
 <body>
@@ -104,13 +147,13 @@
       
       <div class="message message--right">
         <p>
-          this is a text
+          this is another text
         </p>
       </div>
       
       <div class="message">
         <p>
-          this is another text lorem ipsum
+          this is another text let the light shine thru
         </p>
       </div>
       
@@ -135,6 +178,37 @@
           too
         </p>
       </div>
+      
+      <div class="message">
+        <p>
+          do u want to go out sometime?
+        </p>
+      </div>
+      
+      <div class="message">
+        <p>
+          we can be careful & wear masks
+        </p>
+      </div>
+      
+      <div class="message message--right">
+        <p>
+          no thank u
+        </p>
+      </div>
+      
+      <div class="message">
+        <p>
+          thats ok
+        </p>
+      </div>
+      <div class="message">
+        <p>
+          i understand
+        </p>
+      </div>
+      
+      <div class="overlay"></div>
     
     </div>
     <div class="home-button"></div>
