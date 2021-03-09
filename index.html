@@ -67,13 +67,64 @@
   
   .message {
     display: block;
-    position: relative;
+    position: absolute;
     bottom: 0px;
     width: auto;
     margin: 10px 10px 0;
     font-family: monospace;
-    opacity: 1;
-    transform: translateY(-10%);
+    opacity: 0;
+    transform: translateY(100px);
+    animation: showText .2s ease forwards 1;
+  }
+  .message:nth-of-type(1) {
+    animation-delay: 1s
+  }
+  .message:nth-of-type(2) {
+    animation-delay: 2s
+  }
+  .message:nth-of-type(3) {
+    animation-delay: 3s
+  }
+  .message:nth-of-type(4) {
+    animation-delay: 4s
+  }
+  .message:nth-of-type(5) {
+    animation-delay: 5s
+  }
+  .message:nth-of-type(6) {
+    animation-delay: 6s
+  }
+  .message:nth-of-type(7) {
+    animation-delay: 7s
+  }
+  .message:nth-of-type(8) {
+    animation-delay: 8s
+  }
+  .message:nth-of-type(9) {
+    animation-delay: 9s
+  }
+  .message:nth-of-type(10) {
+    animation-delay: 10s
+  }
+  .message:nth-of-type(11) {
+    animation-delay: 11s
+  }
+  .message:nth-of-type(12) {
+    animation-delay: 12s
+  }
+  
+  @keyframes showText {
+    from {
+      position: absolute;
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    
+    to {
+      position: relative;
+      opacity: 1;
+      transform: translateY(-10px);
+    }
   }
   
   .message:last-of-type {
@@ -91,6 +142,8 @@
   }
   
   .message--right {
+    position: absolute;
+    right: 0;
     text-align: right;
   }
   
@@ -138,22 +191,10 @@
   <div class="phone">
     <div class="phone-top"></div>
     <div class="phone-screen">
-    
-      <div class="message">
-        <p>
-          this is a text
-        </p>
-      </div>
-      
-      <div class="message message--right">
-        <p>
-          this is another text
-        </p>
-      </div>
       
       <div class="message">
         <p>
-          this is another text let the light shine thru
+          let the light shine thru
         </p>
       </div>
       
